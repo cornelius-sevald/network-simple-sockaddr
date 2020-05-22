@@ -117,7 +117,7 @@ bind addr = bracketOnError (newSocket addr) (close addr)
                                     (NS.setSocketOption sock so n)
                 when (isTCP addr) (set NS.NoDelay 1)
                 set NS.ReuseAddr 1
-                NS.bindSocket sock addr
+                NS.bind sock addr
                 return sock
   where
     isTCP (SockAddrUnix {}) = False

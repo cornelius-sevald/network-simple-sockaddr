@@ -1,36 +1,41 @@
-name:                network-simple-sockaddr
-version:             0.2
-cabal-version:       >=1.10
-tested-with:         GHC == 7.6.3, GHC == 7.8.4, GHC == 7.10.1
-build-type:          Simple
-license:             BSD3
-license-file:        LICENSE
-author:              Danny Navarro
-maintainer:          j@dannynavarro.net
-category:            Network
-homepage:            https://github.com/jdnavarro/network-simple-sockaddr
-bug-reports:         https://github.com/jdnavarro/network-simple-sockaddr/issues
-extra-source-files:  README.md CHANGELOG.md
-synopsis:            network-simple for resolved addresses
-extra-source-files:  README.md
-description:
-  @<http://hackage.haskell.org/package/network-simple-0.3.0 network-simple>@
-  works by resolving @HostName@s. This packages offers a similar API but
-  working with unresolved addresses in the form of @SockAddr@. In addition to
-  @IPv4@ addresses, @IPv6@ and @Unix Domain Sockets@ are also supported.
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1cf725ecf53def9e7b6899cb2563c50d46600991b9b1c5caddc39c077fd98878
+
+name:           network-simple-sockaddr
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/cornelius-sevald/network-simple-sockaddr#readme>
+homepage:       https://github.com/cornelius-sevald/network-simple-sockaddr#readme
+bug-reports:    https://github.com/cornelius-sevald/network-simple-sockaddr/issues
+author:         Cornelius Sevald-Krause
+maintainer:     cornelius.sevald@protonmail.com
+copyright:      2020 Cornelius Sevald-Krause
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
 
 source-repository head
   type: git
-  location: git://github.com/jdnavarro/network-simple-sockaddr.git
+  location: https://github.com/cornelius-sevald/network-simple-sockaddr
 
 library
-  exposed-modules:     Network.Simple.SockAddr
-  build-depends:       base >=4.6 && <4.9,
-                       bytestring,
-                       directory,
-                       transformers >=0.2,
-                       network >=2.4,
-                       exceptions >=0.6
-  hs-source-dirs:      src
-  default-language:    Haskell2010
-  ghc-options:         -Wall
+  exposed-modules:
+      Network.Simple.SockAddr
+  other-modules:
+      Paths_network_simple_sockaddr
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , directory >=1.3.6.0
+    , exceptions >=0.10.4
+    , network >=3.1.1.1
+    , transformers >=0.5.6.2
+  default-language: Haskell2010

@@ -1,0 +1,31 @@
+name:                network-simple-sockaddr
+version:             0.2.1
+github:              "cornelius-sevald/network-simple-sockaddr"
+license:             BSD3
+author:              "Cornelius Sevald-Krause"
+maintainer:          "cornelius.sevald@protonmail.com"
+copyright:           "2020 Cornelius Sevald-Krause"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/cornelius-sevald/network-simple-sockaddr#readme>
+
+dependencies:
+- base         >= 4.7 && < 5
+- bytestring   >= 0.10.10.0
+- network      >= 3.1.1.1
+- directory    >= 1.3.6.0
+- transformers >= 0.5.6.2
+- exceptions   >= 0.10.4
+
+library:
+  source-dirs: src
+
